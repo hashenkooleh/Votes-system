@@ -25,7 +25,7 @@ web3.eth.getAccounts().then((accountsList) => {
 
 	console.log(`Available accounts (${ accountsList.length }):\r\n${ accountsList.join("\r\n") }`);
 	contractAccount = accountsList[0];
-	console.log(`We will deploy contract from account ${ contractAccount }`);
+	console.log(`We will deploy contract from аккаунт ${ contractAccount }`);
 
 	compile(contractToCompile);
 
