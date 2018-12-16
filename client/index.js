@@ -35,7 +35,7 @@ function init() {
       e('tr', [
         e('td', window.candidates[i]),
         (votesElements[i] = e('td', '?')),
-        e('td', [(votesButtons[i] = e('button', 'Голосовать'))]),
+        e('td', [(votesButtons[i] = e('button', 'Голосувати'))]),
       ])
     );
   }
@@ -46,9 +46,9 @@ function init() {
     updateVotesForCandidate(window.candidates[i], element);
 
     votesButtons[i].addEventListener('click', () => {
-      voteForCandidate(window.candidates[i], document.getElementById('from').value, tx => {
+      voteForCandidate(window.candidates[i], document.getElementById('from').innerText, tx => {
         console.log(tx);
-        log(`Транзакция ${tx.transactionHash}, использовано газа: ${tx.gasUsed}`);
+        log(`Транзакція ${tx.transactionHash}, використано газу: ${tx.gasUsed}`);
         updateVotesForCandidate(window.candidates[i], element);
       });
     });

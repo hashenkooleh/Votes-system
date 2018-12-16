@@ -1,52 +1,188 @@
+@import url(//fonts.googleapis.com/css?family=Oswald:400);
+body {
+  background: #6c778c;
+  font-family: "Oswald", sans-serif;
+}
+
 .vote {
-    background-color: #f8ce43;
-    height: 100%;
-    min-height: 100vh;
-    font-weight: 600;
+  height: 100%;
+  min-height: 100vh;
+  font-weight: 600;
 }
 
 h1 {
-    color: #333333;
-    text-align: center;
-    margin: 5% 0;
+  color: #fff;
+  text-align: center;
+  margin: 3% 0;
 }
 
 th,
 tr,
 td {
-    border: 3px solid #e1e1e3 !important;
-    font-size: 20px;
-    font-weight: 100;
+  border: 2px solid #ffffff !important;
+  font-size: 20px;
+  font-weight: 100;
+  color: #fff;
 }
 
 td {
-    padding: 12px !important;
+  padding: 12px !important;
 }
 
 #table button {
-    background-color: transparent;
-    border: 2px solid #333333;
-    font-size: 16px;
-    padding: 7px 24px;
+  background-color: transparent;
+  border: 2px solid #333333;
+  font-size: 16px;
+  padding: 7px 24px;
 }
 
 #table button:hover {
-    background-color: #333333;
-    color: #e1e1e3;
+  background-color: #333333;
+  color: #e1e1e3;
 }
 
 .vote__hash {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .vote__hash p,
 .vote__hash span {
-    display: inline-block;
-    font-size: 16px;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .vote__hash p {
-    background-color: #e1e1e3;
-    padding: 10px;
+  background-color: #e1e1e3;
+  padding: 10px;
+}
+
+.vote__hash span {
+  color: #e1e1e3;
+}
+
+.info {
+  display: flex;
+}
+
+.info p {
+  font-size: 22px;
+  font-weight: 300;
+  color: white;
+}
+
+#log {
+  color: white;
+  width: 670px;
+  margin-right: 30px;
+  height: 400px;
+  overflow-y: scroll;
+  border: 3px solid #e1e1e3 !important;
+  padding: 10px;
+  margin-right: 32px;
+}
+
+#log>div {
+  margin-bottom: 5px;
+  color: white;
+}
+
+.log {
+  font-size: 18px;
+}
+
+.chart {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  margin-top: 20px;
+}
+
+.doughnutTip {
+  position: absolute;
+  min-width: 30px;
+  max-width: 300px;
+  padding: 5px 15px;
+  border-radius: 1px;
+  background: rgba(0, 0, 0, .8);
+  color: #ddd;
+  font-size: 17px;
+  text-shadow: 0 1px 0 #000;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: .06em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  &::after {
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    content: "";
+    height: 0;
+    margin: 0 0 0 -6px;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 6px solid rgba(0, 0, 0, .7);
+    line-height: 0;
+  }
+}
+
+.doughnutSummary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #d5d5d5;
+  text-align: center;
+  text-shadow: 0 -1px 0 #111;
+  cursor: default;
+}
+
+.doughnutSummaryTitle {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -27%;
+  font-size: 22px;
+  letter-spacing: .06em;
+}
+
+.doughnutSummaryNumber {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -15%;
+  font-size: 55px;
+}
+
+.chart path:hover {
+  opacity: 0.65;
+}
+
+.table-responsive {
+  text-align: right;
+}
+
+.table-bordered {
+  text-align: left;
+}
+
+#result {
+  padding: 5px 28px;
+  font-size: 16px;
+}
+
+#table>tr:nth-child(1)>td:nth-child(1) {
+  color: #1f2c3a;
+  font-weight: bold;
+}
+
+#table>tr:nth-child(2)>td:nth-child(1) {
+  color: #ff7075;
+  font-weight: bold;
+}
+
+#table>tr:nth-child(3)>td:nth-child(1) {
+  color: #6dbbda;
+  font-weight: bold;
 }
